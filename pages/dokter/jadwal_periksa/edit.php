@@ -39,7 +39,7 @@ if (isset($_POST["submit"])) {
         die;
     } else {
         // cek apakah data berhasil di ubah atau tidak
-        updateJadwalPeriksa($_POST, $id);
+        updateJadwalPeriksa__($_POST, $id);
         echo "
           <script>
               alert('Data berhasil diubah');
@@ -81,15 +81,15 @@ ob_start();?>
       <input type="hidden" name="id_dokter" value="<?=$id_dokter?>">
       <div class="form-group">
         <label for="hari">Hari</label>
-        <input type="text" name="hari" id="hari" class="form-control" value="<?= $jadwal['hari'] ?>" readonly>
+        <input type="text" name="hari" id="hari" class="form-control" value="<?= $jadwal['hari'] ?>" >
       </div>
       <div class="form-group">
         <label for="jam_mulai">Jam Mulai</label>
-        <input type="time" name="jam_mulai" id="jam_mulai" class="form-control" value="<?= date('H:i', strtotime($jadwal['jam_mulai'])) ?>" readonly>
+        <input type="time" name="jam_mulai" id="jam_mulai" class="form-control" value="<?= date('H:i', strtotime($jadwal['jam_mulai'])) ?>" >
       </div>
       <div class="form-group">
         <label for="jam_selesai">Jam Selesai</label>
-        <input type="time" name="jam_selesai" id="jam_selesai" class="form-control" value="<?=date('H:i', strtotime($jadwal['jam_selesai']))?>" readonly>
+        <input type="time" name="jam_selesai" id="jam_selesai" class="form-control" value="<?=date('H:i', strtotime($jadwal['jam_selesai']))?>" >
       </div>
       <div class="form-group">
         <!-- radio button input -->

@@ -96,6 +96,8 @@ ob_start();
             <td><?= htmlspecialchars($d['aktif'] == 'Y' ? 'Aktif' : 'Tidak Aktif') ?></td>
             <td>
               <a href="edit.php/<?= htmlspecialchars($d['id']) ?>" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i> Edit</a>
+              <a href="delete.php/<?= htmlspecialchars($d['id']) ?>" class="btn btn-danger btn-sm"><i class="fa fa-edit"></i> Delete</a>
+
             </td>
           </tr>
           <?php
