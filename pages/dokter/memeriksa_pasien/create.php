@@ -28,7 +28,8 @@ $pasiens = query("SELECT
                     dp.id AS id_daftar_poli
                 FROM pasien p
                 INNER JOIN daftar_poli dp ON p.id = dp.id_pasien
-                WHERE p.id = '$id'")[0];
+                WHERE p.id = '$id' AND dp.status_periksa = '0'")[0];
+
 
 
 $biaya_periksa = 150000;
@@ -64,6 +65,7 @@ ob_start();
         <h3 class="card-title">Periksa Pasien</h3>
     </div>
     <div class="card-body">
+        <p><?= $pasiens["id_daftar_poli"] ?></p>
         <form action="" method="POST">
             <!-- Kolom input untuk menambahkan data -->
             <div class="form-group">

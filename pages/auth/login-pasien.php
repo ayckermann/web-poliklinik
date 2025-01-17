@@ -36,7 +36,7 @@ if (isset($_SESSION['login'])) {
 
       <form action="" method="post">
         <div class="input-group mb-3">
-          <input type="text" class="form-control" placeholder="Username | Case Sensitive" name="nama" value="Adi">
+          <input type="text" class="form-control" placeholder="Username | Case Sensitive" name="nama" value="">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-envelope"></span>
@@ -44,7 +44,7 @@ if (isset($_SESSION['login'])) {
           </div>
         </div>
         <div class="input-group mb-3">
-          <input type="password" class="form-control" placeholder="Password | Case Sensitive" name="alamat" value="Semarang">
+          <input type="password" class="form-control" placeholder="Password | Case Sensitive" name="alamat" value="">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-lock"></span>
